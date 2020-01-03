@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'cocktail-advisor-frontend'`, () => {
+  it(`should have as title 'Cocktail Advisor'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('cocktail-advisor-frontend');
+    expect(app.title).toEqual('Cocktail Advisor');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('cocktail-advisor-frontend app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('Cocktail Advisor app is running!');
   });
 });
