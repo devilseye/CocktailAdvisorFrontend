@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
+import { CaCocktailsPanelComponent } from './ca-cocktails-panel/ca-cocktails-panel.component';
+import { CaCocktailDetailsComponent } from './ca-coctail-details/ca-cocktail-details.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [CaCocktailsPanelComponent, CaCocktailDetailsComponent],
   imports: [
     CommonModule
   ]
