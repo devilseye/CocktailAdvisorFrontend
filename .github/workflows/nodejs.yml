@@ -18,6 +18,6 @@ jobs:
           npm ci
           npm run build --if-present
           npm test
-          npm lint
+          npm run lint
         env:
           CI: true
