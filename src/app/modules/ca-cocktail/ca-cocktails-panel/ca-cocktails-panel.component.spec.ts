@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CaCocktailsPanelComponent } from './ca-cocktails-panel.component';
+import { CaCocktailDetailsComponent } from '../ca-cocktail-details/ca-cocktail-details.component';
+import { CaCocktailsPanelService } from './ca-cocktails-panel.service';
 
 describe('CaCocktailsPanelComponent', () => {
   let component: CaCocktailsPanelComponent;
@@ -8,9 +10,9 @@ describe('CaCocktailsPanelComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CaCocktailsPanelComponent ]
-    })
-    .compileComponents();
+      declarations: [CaCocktailsPanelComponent, CaCocktailDetailsComponent],
+      providers: [CaCocktailsPanelService]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
