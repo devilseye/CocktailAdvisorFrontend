@@ -9,7 +9,9 @@ import { CaSharedModule } from './modules/ca-shared/ca-shared.module';
 import { RouterModule, Routes } from '@angular/router';
 import { CaCocktailCardComponent } from './modules/ca-cocktail/ca-cocktail-details/ca-cocktail-card/ca-cocktail-card.component';
 import { CaPostPanelComponent } from './modules/ca-shared/ca-post-panel/ca-post-panel.component';
-import { MatIconModule, MatTabsModule, MatToolbarModule } from '@angular/material';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 export const routeConfig: Routes = [
   {
