@@ -1,1 +1,20 @@
-<p>ca-cocktail-details works!</p>
+<div class="ca-cocktail-details_panel">
+  <app-ca-cocktail-card *ngIf="isOpen; else cocktailSummary"></app-ca-cocktail-card>
+
+  <ng-template #cocktailSummary>
+    <a class="ca-cocktail-img" href="{{cocktail.imageLink}}"></a>
+    <div class="ca-cocktail-details_header">
+      <div>
+        {{cocktail.name}}</div>
+    </div>
+    <div class="ca-cocktail-details_info">
+      <div class="_description">{{cocktail.description}}</div>
+      <div class="_algorithm">{{cocktail.algorithm}}</div>
+      <div class="_preparation-method">{{cocktail.preparationMethod}}</div>
+      <div class="_glassware">{{cocktail.glassware.name}}</div>
+
+      <div *ngFor="let category of cocktail.categories" class="_categories">
+        <div class="_category">{{category.name}}</div>
+      </div>
+    </div>
+  </ng-template>

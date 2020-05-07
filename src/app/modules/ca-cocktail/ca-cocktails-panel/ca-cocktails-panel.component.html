@@ -1,6 +1,4 @@
-<p>ca-cocktails-panel works!</p>
-
-<div *ngFor="let cocktail of cocktails">
+<div *ngFor="let cocktail of cocktails" class="ca-post-row">
   <div class="ca-cocktail-summary">{{cocktail.name}}</div>
-  <app-ca-cocktail-details></app-ca-cocktail-details>
+  <ca-cocktail-details [cocktail]="cocktail"></ca-cocktail-details>
 </div>

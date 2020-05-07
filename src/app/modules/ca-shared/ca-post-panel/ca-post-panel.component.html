@@ -1,0 +1,10 @@
+<div *ngFor="let post of posts" class="ca-post-row">
+  <a class="post-img"><img src="{{post.imageLink}}" alt="{{post.title}}"></a>
+  <div class="post-body">
+    <div class="post-category">
+      <a href="{{post.category}}">{{post.category}}</a>
+    </div>
+    <h3 class="post-title"><a href="{{getPostLink(post)}}">{{post.title}}</a></h3>
+    <p>{{post.summary}}</p>
+  </div>
+</div>
