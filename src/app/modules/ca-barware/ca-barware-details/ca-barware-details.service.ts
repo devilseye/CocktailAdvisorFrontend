@@ -1,20 +1,19 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { CaCocktail } from '../model/ca-cocktail.model';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { HttpUtilsService } from '../../ca-shared/http-utils.service';
+import { Observable } from 'rxjs';
 import { ApiRoutes } from '../../ca-shared/model/routes';
 import { catchError } from 'rxjs/operators';
+import { CaBarware } from '../../ca-inventory/model/ca-barware.model';
 
 @Injectable()
-export class CaCocktailsPanelService {
-
+export class CaBarwareDetailsService {
   constructor(private http: HttpClient,
               private httpUtilsService: HttpUtilsService) {
   }
 
-  loadCocktails(): Observable<CaCocktail[]> {
-    return this.http.get<CaCocktail[]>(ApiRoutes.getCocktails)
+  loadBarwares(): Observable<CaBarware[]> {
+    return this.http.get<CaBarware[]>(ApiRoutes.getBarwares)
         .pipe(
             catchError((errorResponse: HttpErrorResponse) =>
                 this.httpUtilsService.handleError(errorResponse))

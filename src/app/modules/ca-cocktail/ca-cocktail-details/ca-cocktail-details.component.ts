@@ -10,13 +10,8 @@ export class CaCocktailDetailsComponent implements OnInit {
   @Input()
   cocktail: CaCocktail;
 
-  @Input()
-  isEditState: boolean = false;
-
-  @Input()
-  isOpen: boolean = false;
-
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

@@ -1,20 +1,29 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { CaCategory, CaPost } from '../model/ca-post.model';
+import { Observable } from 'rxjs';
+import { CaPost } from '../model/ca-post.model';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { ApiRoutes } from '../model/routes';
+import { catchError } from 'rxjs/operators';
+import { HttpUtilsService } from '../http-utils.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CaPostPanelService {
-
-  private stubPosts: CaPost[] = [{
-    id: '1',
-    imageLink: '',
-    title: 'Uno',
-    category: CaCategory.COCKTAIL,
-    summary: 'First cocktail in the thread'}] as CaPost[];
+  constructor(private http: HttpClient,
+              private httpUtilsService: HttpUtilsService) {
+  }
 
   loadPosts(): Observable<CaPost[]> {
-    return of(this.stubPosts);
+    return this.http.get<CaPost[]>(ApiRoutes.getPosts)
+        .pipe(
+            catchError((errorResponse: HttpErrorResponse) =>
+                this.httpUtilsService.handleError(errorResponse))
+        );
+  }
+
+  //todo implementation is required
+  public getPostLikes(post: CaPost): string {
+    return '44';
   }
 }

@@ -1,0 +1,17 @@
+<mat-card class="example-card" *ngFor="let glassware of glasswares">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>
+      {{glassware.name}}
+    </mat-card-title>
+    <mat-card-subtitle class="post-category">
+      <a mat-raised-button href="glasswares" color="accent">Барная посуда</a>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image class="post-img" src="{{glassware.imageLink}}" alt="{{glassware.name}}">
+  <mat-card-content>
+    <p>
+      {{glassware.description}}
+    </p>
+  </mat-card-content>
+</mat-card>

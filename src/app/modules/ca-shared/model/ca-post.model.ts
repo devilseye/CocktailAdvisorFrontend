@@ -3,11 +3,12 @@ export interface CaPost {
   imageLink: string;
   title: string;
   summary: string;
-  category: CaCategory;
+  category: CaCategoryTypes;
 }
 
-export enum CaCategory {
-  COCKTAIL = 'cocktail',
+export enum CaCategoryTypes {
+  COCKTAIL = 'cocktails',
   BARWARE = 'barware',
   GLASSWARE = 'glassware'
 }
+

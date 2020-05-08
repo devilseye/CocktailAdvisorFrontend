@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1",
+    "name": "Uno",
+    "description": "The first test cocktail.",
+    "receiptSteps": [
+      "1 Go to your kitchen \n",
+      "2 Open the bottle \n",
+      "3 Drink!"
+    ],
+    "glassware": {
+      "id": "11",
+      "name": "Стакан",
+      "imageLink": ""
+    },
+    "categories": [
+      {
+        "id": "12",
+        "name": "shot",
+        "imageLink": ""
+      }
+    ]
+  }
+]

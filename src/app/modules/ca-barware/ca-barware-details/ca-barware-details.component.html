@@ -1,0 +1,17 @@
+<mat-card class="example-card" *ngFor="let barware of barwares">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>
+      {{barware.name}}
+    </mat-card-title>
+    <mat-card-subtitle class="post-category">
+      <a mat-raised-button href="barwares" color="accent">Барное оборудование</a>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image class="post-img" src="{{barware.imageLink}}" alt="{{barware.name}}">
+  <mat-card-content>
+    <p>
+      {{barware.description}}
+    </p>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "imageLink": "",
+    "title": "Uno",
+    "category": "cocktails",
+    "summary": "First cocktail in the thread"
+  },
+  {
+    "id": "2",
+    "imageLink": "",
+    "title": "Dos",
+    "category": "cocktails",
+    "summary": "Second cocktail in the thread"
+  },
+  {
+    "id": "3",
+    "imageLink": "",
+    "title": "Шейкер",
+    "category": "barwares",
+    "summary": "Посуда для приготовления коктейлей методом встряхивания компонентов."
+  },
+  {
+    "id": "4",
+    "imageLink": "",
+    "title": "Масс",
+    "category": "glasswares",
+    "summary": "Литровая кружка для пива или радлера в германоязычных странах."
+  }
+]

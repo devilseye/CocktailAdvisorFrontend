@@ -13,7 +13,7 @@ export class CaPostPanelComponent implements OnInit, OnDestroy {
   posts: CaPost[] = [];
   private unsubscribe: Subject<void> = new Subject();
 
-  constructor(private caPostPanelService: CaPostPanelService) {
+  constructor(public caPostPanelService: CaPostPanelService) {
   }
 
   ngOnInit() {

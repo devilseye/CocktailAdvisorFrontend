@@ -6,7 +6,7 @@ export class CaCocktail {
   id: string;
   name: string;
   description: string;
-  algorithm: string;
+  receiptSteps: string[];
   preparationMethod: CaPreparationMethod;
   glassware: CaGlassware;
   imageLink: string;
