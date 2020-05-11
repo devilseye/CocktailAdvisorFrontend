@@ -16,7 +16,7 @@ describe('CaCocktailDetailsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CaCocktailDetailsComponent);
     component = fixture.componentInstance;
-    //fixture.detectChanges();
+    // fixture.detectChanges(); // TODO fix this line
   });
 
   it('should create', () => {
