@@ -22,7 +22,7 @@ export class CaPostPanelService {
         );
   }
 
-  //todo implementation is required
+  // todo implementation is required
   public getPostLikes(post: CaPost): string {
     return '44';
   }

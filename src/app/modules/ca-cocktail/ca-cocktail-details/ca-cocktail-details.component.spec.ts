@@ -8,15 +8,15 @@ describe('CaCocktailDetailsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CaCocktailDetailsComponent ]
+      declarations: [CaCocktailDetailsComponent]
     })
-    .compileComponents();
+        .compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(CaCocktailDetailsComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    //fixture.detectChanges();
   });
 
   it('should create', () => {

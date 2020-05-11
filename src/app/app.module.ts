@@ -24,7 +24,7 @@ import { AppRoutingModule } from './app-routing.module';
     CaBarwareModule,
     CaGlasswareModule
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule {
