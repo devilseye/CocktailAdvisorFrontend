@@ -1,4 +1,4 @@
-# CocktailAdvisorFrontend [![Actions Status](https://github.com/devilseye/CocktailAdvisorFrontend/workflows/Angular%20CI/badge.svg)](https://github.com/devilseye/CocktailAdvisorFrontend/actions)
+# CocktailAdvisorFrontend Application [![Actions Status](https://github.com/devilseye/CocktailAdvisorFrontend/workflows/Angular%20CI/badge.svg)](https://github.com/devilseye/CocktailAdvisorFrontend/actions)
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
