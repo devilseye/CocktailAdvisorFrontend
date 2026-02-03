@@ -6,6 +6,7 @@ import { CaPostPanelService } from './ca-post-panel.service';
 
 @Component({
   selector: 'app-ca-post-panel',
+  standalone: false,
   templateUrl: './ca-post-panel.component.html'
 })
 export class CaPostPanelComponent implements OnInit, OnDestroy {

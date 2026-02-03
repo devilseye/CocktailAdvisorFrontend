@@ -6,6 +6,7 @@ import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-ca-cocktails-panel',
+  standalone: false,
   templateUrl: './ca-cocktails-panel.component.html',
   providers: [CaCocktailsPanelService]
 })

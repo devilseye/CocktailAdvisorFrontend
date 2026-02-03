@@ -6,6 +6,7 @@ import { CaBarwareDetailsService } from './ca-barware-details.service';
 
 @Component({
   selector: 'app-ca-barware-details',
+  standalone: false,
   templateUrl: './ca-barware-details.component.html',
   styleUrls: ['./ca-barware-details.component.scss'],
   providers: [CaBarwareDetailsService]

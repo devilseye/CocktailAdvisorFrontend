@@ -6,6 +6,7 @@ import { CaGlassware } from '../../ca-inventory/model/ca-glassware.model';
 
 @Component({
   selector: 'app-ca-glassware-details',
+  standalone: false,
   templateUrl: './ca-glassware-details.component.html',
   styleUrls: ['./ca-glassware-details.component.scss'],
   providers: [CaGlasswareDetailsService]
