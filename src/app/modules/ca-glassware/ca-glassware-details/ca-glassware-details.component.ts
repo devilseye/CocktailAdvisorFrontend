@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { CaGlasswareDetailsService } from './ca-glassware-details.service';
@@ -15,9 +15,7 @@ export class CaGlasswareDetailsComponent implements OnInit, OnDestroy {
 
   glasswares: CaGlassware[] = [];
   private unsubscribe: Subject<void> = new Subject();
-
-  constructor(private caGlasswareDetailsService: CaGlasswareDetailsService) {
-  }
+  private readonly caGlasswareDetailsService = inject(CaGlasswareDetailsService);
 
   ngOnInit() {
 

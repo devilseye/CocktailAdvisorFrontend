@@ -4,6 +4,7 @@ import { CaBarwareDetailsComponent } from './ca-barware-details.component';
 import { of } from 'rxjs';
 import { CaBarwareDetailsService } from './ca-barware-details.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { CaSharedModule } from '../../ca-shared/ca-shared.module';
 
 describe('CaBarwareDetailsComponent', () => {
   let component: CaBarwareDetailsComponent;
@@ -15,7 +16,7 @@ describe('CaBarwareDetailsComponent', () => {
     spyBarwareDetailsServiceSpy.loadBarwares.and.returnValue(of([]));
 
     TestBed.configureTestingModule({
-      imports: [ HttpClientTestingModule ],
+      imports: [HttpClientTestingModule, CaSharedModule],
       declarations: [CaBarwareDetailsComponent],
       providers: [{ provide: CaBarwareDetailsService, useValue: spyBarwareDetailsServiceSpy }]
     })

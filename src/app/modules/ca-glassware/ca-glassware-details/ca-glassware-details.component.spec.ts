@@ -4,6 +4,7 @@ import { CaGlasswareDetailsComponent } from './ca-glassware-details.component';
 import { CaGlasswareDetailsService } from './ca-glassware-details.service';
 import { of } from 'rxjs';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { CaSharedModule } from '../../ca-shared/ca-shared.module';
 
 describe('CaGlasswareDetailsComponent', () => {
   let component: CaGlasswareDetailsComponent;
@@ -15,7 +16,7 @@ describe('CaGlasswareDetailsComponent', () => {
     caGlasswareDetailsServiceSpy.loadGlassware.and.returnValue(of([]));
 
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
+      imports: [HttpClientTestingModule, CaSharedModule],
       declarations: [CaGlasswareDetailsComponent],
       providers: [{provide: CaGlasswareDetailsService, useValue: caGlasswareDetailsServiceSpy}]
     })

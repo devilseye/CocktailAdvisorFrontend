@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { CaBarware } from '../../ca-inventory/model/ca-barware.model';
@@ -15,9 +15,7 @@ export class CaBarwareDetailsComponent implements OnInit, OnDestroy {
 
   barwares: CaBarware[] = [];
   private unsubscribe: Subject<void> = new Subject();
-
-  constructor(private caBarwareDetailsService: CaBarwareDetailsService) {
-  }
+  private readonly caBarwareDetailsService = inject(CaBarwareDetailsService);
 
   ngOnInit() {
 

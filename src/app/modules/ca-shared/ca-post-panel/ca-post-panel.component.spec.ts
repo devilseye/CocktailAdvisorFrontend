@@ -3,6 +3,7 @@ import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CaPostPanelComponent } from './ca-post-panel.component';
 import { CaPostPanelService } from './ca-post-panel.service';
 import { of } from 'rxjs';
+import { CaSharedModule } from '../ca-shared.module';
 
 describe('CaPostPanelComponent', () => {
   let component: CaPostPanelComponent;
@@ -14,7 +15,7 @@ describe('CaPostPanelComponent', () => {
     caPostPanelServiceSpy.loadPosts.and.returnValue(of([]));
 
     TestBed.configureTestingModule({
-      declarations: [CaPostPanelComponent],
+      imports: [CaSharedModule],
       providers: [{provide: CaPostPanelService, useValue: caPostPanelServiceSpy}]
     })
         .compileComponents();
