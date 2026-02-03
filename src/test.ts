@@ -10,4 +10,9 @@ getTestBed().initTestEnvironment(
     platformBrowserDynamicTesting()
 );
 // Then we find all the tests.
-import.meta.glob('./**/*.spec.ts', { eager: true });
+import './app/app.component.spec';
+import './app/modules/ca-barware/ca-barware-details/ca-barware-details.component.spec';
+import './app/modules/ca-cocktail/ca-cocktail-details/ca-cocktail-details.component.spec';
+import './app/modules/ca-cocktail/ca-cocktails-panel/ca-cocktails-panel.component.spec';
+import './app/modules/ca-glassware/ca-glassware-details/ca-glassware-details.component.spec';
+import './app/modules/ca-shared/ca-post-panel/ca-post-panel.component.spec';
