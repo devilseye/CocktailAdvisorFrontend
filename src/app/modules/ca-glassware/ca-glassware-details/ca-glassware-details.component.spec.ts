@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CaGlasswareDetailsComponent } from './ca-glassware-details.component';
 import { CaGlasswareDetailsService } from './ca-glassware-details.service';
@@ -9,7 +9,7 @@ describe('CaGlasswareDetailsComponent', () => {
   let component: CaGlasswareDetailsComponent;
   let fixture: ComponentFixture<CaGlasswareDetailsComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     const caGlasswareDetailsServiceSpy =
         jasmine.createSpyObj('CaGlasswareDetailsService', ['loadGlassware']);
     caGlasswareDetailsServiceSpy.loadGlassware.and.returnValue(of([]));

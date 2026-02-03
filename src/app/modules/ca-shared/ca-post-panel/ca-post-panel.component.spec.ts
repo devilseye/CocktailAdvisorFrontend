@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CaPostPanelComponent } from './ca-post-panel.component';
 import { CaPostPanelService } from './ca-post-panel.service';
@@ -8,7 +8,7 @@ describe('CaPostPanelComponent', () => {
   let component: CaPostPanelComponent;
   let fixture: ComponentFixture<CaPostPanelComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     const caPostPanelServiceSpy =
         jasmine.createSpyObj('CaPostPanelService', ['loadPosts']);
     caPostPanelServiceSpy.loadPosts.and.returnValue(of([]));

@@ -110,7 +110,6 @@
       }
     }
   },
-  "defaultProject": "cocktail-advisor-frontend",
   "cli": {
     "analytics": false
   }

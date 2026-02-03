@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CaCocktailsPanelComponent } from './ca-cocktails-panel.component';
 import { CaCocktailsPanelService } from './ca-cocktails-panel.service';
@@ -8,7 +8,7 @@ describe('CaCocktailsPanelComponent', () => {
   let component: CaCocktailsPanelComponent;
   let fixture: ComponentFixture<CaCocktailsPanelComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
       declarations: [CaCocktailsPanelComponent],

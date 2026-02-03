@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CaBarwareDetailsComponent } from './ca-barware-details.component';
 import { of } from 'rxjs';
@@ -9,7 +9,7 @@ describe('CaBarwareDetailsComponent', () => {
   let component: CaBarwareDetailsComponent;
   let fixture: ComponentFixture<CaBarwareDetailsComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     const spyBarwareDetailsServiceSpy =
         jasmine.createSpyObj('CaBarwareDetailsService', ['loadBarwares']);
     spyBarwareDetailsServiceSpy.loadBarwares.and.returnValue(of([]));
