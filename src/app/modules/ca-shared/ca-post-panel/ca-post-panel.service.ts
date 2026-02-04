@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CaPost } from '../model/ca-post.model';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
@@ -10,9 +10,8 @@ import { HttpUtilsService } from '../http-utils.service';
   providedIn: 'root'
 })
 export class CaPostPanelService {
-  constructor(private http: HttpClient,
-              private httpUtilsService: HttpUtilsService) {
-  }
+  private readonly http = inject(HttpClient);
+  private readonly httpUtilsService = inject(HttpUtilsService);
 
   loadPosts(): Observable<CaPost[]> {
     return this.http.get<CaPost[]>(ApiRoutes.getPosts)

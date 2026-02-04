@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { HttpUtilsService } from '../../ca-shared/http-utils.service';
 import { Observable } from 'rxjs';
@@ -8,9 +8,8 @@ import { CaGlassware } from '../../ca-inventory/model/ca-glassware.model';
 
 @Injectable()
 export class CaGlasswareDetailsService {
-  constructor(private http: HttpClient,
-              private httpUtilsService: HttpUtilsService) {
-  }
+  private readonly http = inject(HttpClient);
+  private readonly httpUtilsService = inject(HttpUtilsService);
 
   loadGlassware(): Observable<CaGlassware[]> {
     return this.http.get<CaGlassware[]>(ApiRoutes.getGlasswares)

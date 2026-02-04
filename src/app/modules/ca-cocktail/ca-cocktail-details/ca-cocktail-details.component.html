@@ -5,22 +5,26 @@
     </mat-card-title>
     <mat-card-subtitle class="post-category">
       <a mat-raised-button href="cocktails" color="accent">Коктейли</a>
-      <mat-chip-list *ngFor="let category of cocktail.categories" class="_categories">
-        <mat-chip class="_category">{{category.name}}</mat-chip>
-      </mat-chip-list>
+      @for (category of cocktail.categories; track category) {
+        <mat-chip-set class="_categories">
+          <mat-chip class="_category">{{category.name}}</mat-chip>
+        </mat-chip-set>
+      }
     </mat-card-subtitle>
   </mat-card-header>
   <img mat-card-image class="post-img" src="{{cocktail.imageLink}}" alt="{{cocktail.name}}">
   <mat-card-content>
     <div class="ca-cocktail-details_info">
       <p class="_description">{{cocktail.description}}</p>
-      <mat-chip-list aria-label="Барная посуда" class="_glassware">
-        <mat-chip color="primary" selected>{{cocktail.glassware.name}}</mat-chip>
-      </mat-chip-list>
+      <mat-chip-set aria-label="Барная посуда" class="_glassware">
+        <mat-chip color="primary">{{cocktail.glassware.name}}</mat-chip>
+      </mat-chip-set>
       <mat-vertical-stepper class="_algorithm" [linear]="false">
-        <mat-step *ngFor="let step of cocktail.receiptSteps">
-          <p>{{step}}</p>
-        </mat-step>
+        @for (step of cocktail.receiptSteps; track step) {
+          <mat-step>
+            <p>{{step}}</p>
+          </mat-step>
+        }
       </mat-vertical-stepper>
       <div class="_preparation-method">{{cocktail.preparationMethod}}</div>
     </div>
@@ -30,4 +34,3 @@
     <button mat-button>SHARE</button>
   </mat-card-actions>
 </mat-card>
-

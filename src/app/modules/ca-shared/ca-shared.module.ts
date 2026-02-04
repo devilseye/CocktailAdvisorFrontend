@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CaPostPanelComponent } from './ca-post-panel/ca-post-panel.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -12,7 +11,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatStepperModule } from '@angular/material/stepper';
 
 @NgModule({
-  declarations: [CaPostPanelComponent],
+  declarations: [],
   imports: [
     CommonModule,
     MatButtonModule,
@@ -20,21 +19,18 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatToolbarModule,
     MatIconModule,
     MatTabsModule,
-    MatButtonModule,
-    MatCardModule,
     MatDividerModule,
     MatBadgeModule,
     MatChipsModule,
     MatStepperModule
   ],
-  exports: [CaPostPanelComponent,
+  exports: [
+    CommonModule,
     MatButtonModule,
     MatCardModule,
     MatToolbarModule,
     MatIconModule,
     MatTabsModule,
-    MatButtonModule,
-    MatCardModule,
     MatDividerModule,
     MatBadgeModule,
     MatChipsModule,

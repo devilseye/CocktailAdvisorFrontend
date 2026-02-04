@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { HttpUtilsService } from '../../ca-shared/http-utils.service';
 import { Observable } from 'rxjs';
@@ -8,9 +8,8 @@ import { CaBarware } from '../../ca-inventory/model/ca-barware.model';
 
 @Injectable()
 export class CaBarwareDetailsService {
-  constructor(private http: HttpClient,
-              private httpUtilsService: HttpUtilsService) {
-  }
+  private readonly http = inject(HttpClient);
+  private readonly httpUtilsService = inject(HttpUtilsService);
 
   loadBarwares(): Observable<CaBarware[]> {
     return this.http.get<CaBarware[]>(ApiRoutes.getBarwares)
