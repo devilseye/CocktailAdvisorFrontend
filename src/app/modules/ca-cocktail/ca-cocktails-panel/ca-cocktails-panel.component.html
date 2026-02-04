@@ -1,5 +1,7 @@
 <p>Рецепты алкогольных и безалкогольных коктейлей. Бармен devilseye покажет, как приготовить известные коктейли и расскажет истории возникновения коктейлей. Лонг-Айленд Айс Ти, Олд Фэшн, Негрони, Сангрия, Мартини и другие.</p>
 <mat-divider></mat-divider>
-<div *ngFor="let cocktail of cocktails" class="ca-post-row">
-  <app-ca-cocktail-details [cocktail]="cocktail"></app-ca-cocktail-details>
-</div>
+@for (cocktail of cocktails; track cocktail) {
+  <div class="ca-post-row">
+    <app-ca-cocktail-details [cocktail]="cocktail"></app-ca-cocktail-details>
+  </div>
+}

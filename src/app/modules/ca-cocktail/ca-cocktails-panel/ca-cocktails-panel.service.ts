@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CaCocktail } from '../model/ca-cocktail.model';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
@@ -9,9 +9,8 @@ import { catchError } from 'rxjs/operators';
 @Injectable()
 export class CaCocktailsPanelService {
 
-  constructor(private http: HttpClient,
-              private httpUtilsService: HttpUtilsService) {
-  }
+  private readonly http = inject(HttpClient);
+  private readonly httpUtilsService = inject(HttpUtilsService);
 
   loadCocktails(): Observable<CaCocktail[]> {
     return this.http.get<CaCocktail[]>(ApiRoutes.getCocktails)
