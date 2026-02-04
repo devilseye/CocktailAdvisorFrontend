@@ -1,6 +1,5 @@
 import { waitForAsync, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { CaSharedModule } from './modules/ca-shared/ca-shared.module';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
@@ -8,9 +7,6 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
-        CaSharedModule
-      ],
-      declarations: [
         AppComponent
       ],
     }).compileComponents();

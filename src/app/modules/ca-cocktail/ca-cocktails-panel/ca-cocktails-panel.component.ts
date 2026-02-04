@@ -1,12 +1,16 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, OnInit, inject } from '@angular/core';
+import { MatDividerModule } from '@angular/material/divider';
 import { CaCocktailsPanelService } from './ca-cocktails-panel.service';
 import { CaCocktail } from '../model/ca-cocktail.model';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { CaCocktailDetailsComponent } from '../ca-cocktail-details/ca-cocktail-details.component';
 
 @Component({
   selector: 'app-ca-cocktails-panel',
-  standalone: false,
+  standalone: true,
+  imports: [CaCocktailDetailsComponent, CommonModule, MatDividerModule],
   templateUrl: './ca-cocktails-panel.component.html',
   providers: [CaCocktailsPanelService]
 })
